@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Mar  3 21:15:54 2022
-
-@author: Temitayo
-"""
 #import beautiful soup to parse web pages
 from bs4 import BeautifulSoup
 
