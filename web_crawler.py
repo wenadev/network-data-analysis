@@ -464,22 +464,3 @@ nx.draw(G2, pos, with_labels=True, node_size=10, node_color='purple', font_color
 
 #display the graph
 pl.show()
-
-
-#returns a random graph with a probability of 0.5  
-G=nx.erdos_renyi_graph(n=5929,p=.05)
-
-#creates a graph with nodes only with closeness centrality values over 0.1
-G2=nx.subgraph(G,[x for x in G.nodes() for v in degree.values() if v > 50])
-
-#change size based on closeness centrality values
-size = [v * 10000 for v in degree.values()] 
-
-# draw the graph using Fruchterman-Reingold force-directed algorithm
-pos = nx.nx_pydot.graphviz_layout(G2)
-
-#draw the subgraph with nodes and edges
-nx.draw(G2, pos, with_labels=True, node_size=10, node_color='olive', font_color='white', font_size=2, edge_color='black')
-
-#display the graph
-pl.show()
